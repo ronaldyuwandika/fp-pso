@@ -1,0 +1,34 @@
+<x-layout>
+
+  @section('content')
+  <div class="base min-h-screen flex items-center justify-center">
+    <form action="{{ route('login.store') }}" method="POST">
+      <h2 class="text-6xl font-bold">Login</h2>
+      <div class="flex flex-col space-y-4">
+        @error('status')
+        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+        @enderror
+        @csrf
+        <input type="text" name="username" placeholder="Username"
+          class="w-80 h-10 border text-gray-400 rounded-lg px-4 outline-none focus:border-blue-500 mt-4 @error('username') border-red-500 @enderror">
+        @error('username')
+        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+        @enderror
+        <input type="password" name="password" placeholder="Password"
+          class="w-80 h-10 border text-gray-400 rounded-lg px-4 outline-none focus:border-blue-500 mt-4 @error('password') border-red-500 @enderror">
+        @error('password')
+        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+        @enderror
+        <button type="submit"
+          class="mt-4 bg-white border-2 border-orange-500 hover:bg-orange-100 text-black font-bold py-2 px-4 w-52 text-center rounded-lg">
+          Login
+        </button>
+        <a class="text-red-500" href="{{route('welcome')}}">
+          Kembali
+        </a>
+      </div>
+    </form>
+  </div>
+
+  @endsection
+</x-layout>
