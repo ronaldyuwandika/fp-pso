@@ -1,3 +1,8 @@
 vendor
 .env
 package-lock.json
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+terraform.tfstate.backup
+.terraform
+node_modules
