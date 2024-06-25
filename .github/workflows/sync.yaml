@@ -24,3 +24,16 @@ jobs:
 
       - name: Use gcloud CLI
         run: gcloud info
+
+      - name: "Docker auth"
+        run: |-
+          gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
+      - name: "Check File"
+        run: |-
+          ls -la
+          
+      - name: Build image
+        run: docker build -t ${{ env.GAR_LOCATION }} .
+
+      - name: Push image
+        run: docker push ${{ env.GAR_LOCATION }}
