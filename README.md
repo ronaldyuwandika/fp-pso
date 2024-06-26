@@ -6,6 +6,13 @@ Clone from this repository "fp-sisop"
 Make Docker file that satisfy both your source code and the virtual private server
 ### Step 3
 Make Terraform that satify both your source code and the virtual private server
+> Make sure your URL name the same as domain name
+```
+env {
+            name = "APP_URL"
+            value = "https://itsparking-6azj6n3oaq-et.a.run.app"
+        }
+```
 ### Step 4
 Run `make` in your terminal, this will run series of command in your terminal.
 
@@ -21,6 +28,7 @@ Run `make` in your terminal, this will run series of command in your terminal.
 ### Step 2 
  Upload your key to Github Secrets 
 > Make sure that you name the keyname in Github Secrets same as the one in .github/workflows
+
 ### Step 3
 Setup your environment in Github Secrets with 
 
@@ -29,9 +37,9 @@ PROJECT_ID: fp-sisop
 REGION: asia-southeast2
  GAR_LOCATION: asia-southeast2-docker.pkg.dev/fp-sisop/itsparking/itsparking:latest
 ```
-> PROJECET_ID is
-> REGION is 
-> GAR_LOCATION is
+- PROJECET_ID is
+- REGION is 
+- GAR_LOCATION is
 
 ### Step 4
  Continue your development and when you are finished just simply push your source code to `main`. This will automatically trigger github action to deploy and test in your google cloud run then  your code that eventually accessible to public
