@@ -1,4 +1,4 @@
-## How to deploy with local computer
+## How to deploy with local computer (Manual)
 
 ### Step 1
 Clone from this repository "fp-sisop"
@@ -12,7 +12,9 @@ Run `make` in your terminal, this will run series of command in your terminal.
 ### What is inside makefile?
 -
 
-## How to deploy with Github action (The use case is using Google Cloud Service)
+## How to deploy with Github action (CI/CD)
+(The use case is using Google Cloud Service)
+
 ### Step 1 
  Generate key in service account in "I am Admin", and make sure that your service account have access to your instance
 > Make sure you minify (make the key in one line) the key because the github secret engine is unable to read a key with space break
