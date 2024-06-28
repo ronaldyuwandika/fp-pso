@@ -89,4 +89,4 @@ fp-sisop: This is the name of the project within which the Artifact Registry is 
 itsparking/itsparking:latest: This specifies the repository and the image within the Artifact Registry. itsparking is the name of the repository, and itsparking:latest refers to the image named itsparking with the latest tag, indicating the most recent version of this image.
 
 ### Step 4
- Continue your development and when you are finished just simply push your source code to `main`. This will automatically trigger github action to deploy and test in your google cloud run then  your code that eventually accessible to public
+ Continue your development and when you are finished just simply push your source code to `main`. This will automatically trigger github action to deploy and test in your google cloud run then  your code will eventually be accessible to public
