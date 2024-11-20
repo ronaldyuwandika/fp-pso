@@ -8,7 +8,7 @@ on:
 env:
   PROJECT_ID: ronaldyuwandika
   REGION: asia-southeast2
-  GAR_LOCATION: asia-southeast2-docker.pkg.dev/ronaldyuwandika/itsparking:latest
+  GAR_LOCATION: asia-southeast2-docker.pkg.dev/ronaldyuwandika/ronaldyuwandika:latest
 
 jobs:
   build-push-artifact:
